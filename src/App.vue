@@ -8,7 +8,7 @@
 
 <script>
 import TheNavBar from './components/header/TheNavBar'
-import TheMenu from './components/menu//TheMenu'
+import TheMenu from './components/menu/TheMenu'
 
 export default {
   name: 'App',
@@ -20,16 +20,18 @@ export default {
 </script>
 
 <style>
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 body {
   margin: 0;
   padding: 0;
   background-color: #e8e8e1;
-  /* font-family: Courier, monospace */
+  font-family: Inconsolata,monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 html, body{

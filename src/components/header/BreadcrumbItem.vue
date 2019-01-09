@@ -36,9 +36,8 @@ span{
 }
 
 a{
-	padding-right: 5px;
+	padding: 5px;
 	font-size: 90%;
-    font-family: Verdana,Geneva,sans-serif;
 	cursor: pointer;
 }
 
