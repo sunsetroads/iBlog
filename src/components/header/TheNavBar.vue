@@ -36,14 +36,13 @@ export default {
   margin-bottom: 20px;
   position: fixed;
   width: 100%;
+  font-family: Verdana,Geneva,sans-serif;
   font-size: 17px;
   color: #900;
 }
 
 a {
     font-size: 100%;
-    font-family: Verdana,Geneva,sans-serif;
-    text-decoration: none;
     color: #900;
 }
 </style>
