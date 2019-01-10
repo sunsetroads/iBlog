@@ -20,13 +20,13 @@ export default {
 </script>
 
 <style>
+@import url('./font/font.css');
+
 body {
   margin: 0;
   padding: 0;
   background-color: #e8e8e1;
   font-family: Inconsolata,monospace;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 a {

@@ -17,7 +17,7 @@ export default {
     return {
       qwe: "123123",
       items: [
-        { message: 'Foo', id: 1},
+        { message: 'Talking about buffer switching in emacs in the last post , I said that I have keybindings to switch between the two and three most recent used buffers. And the author of the reddit post chose to use buffer-flip package', id: 1},
         { message: 'Foo', id: 2 },
         { message: 'Foo', id: 3 },
         { message: 'Foo', id: 4 },

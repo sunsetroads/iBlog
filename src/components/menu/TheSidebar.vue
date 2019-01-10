@@ -59,7 +59,6 @@ export default {
   padding-left: 15px;
   color: #eeeded;
   font-size: 15px;
-  font-weight: bold
 }
 
 .count {
