@@ -25,8 +25,8 @@ export default {
   padding-left: 2em;
   padding-right: 2em;
   padding-bottom: .5em;
-  margin-left: 8em;
-  margin-right: 8em;
+  margin-left: 10em;
+  margin-right: 10em;
   margin-bottom: 1.5em;
   border-radius: .2em;
   height: 300px;
