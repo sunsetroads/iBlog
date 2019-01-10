@@ -43,8 +43,8 @@ export default {
   top: 0;
   right: 0;
   overflow: hidden!important;
-  z-index: 5;
-  transition: all .55s ease-in
+  z-index: 1005;
+  transition: all .55s ease-in;
 }
 
 #menu-espanso.expand {
