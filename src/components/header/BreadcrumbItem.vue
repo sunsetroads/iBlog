@@ -31,7 +31,7 @@ export default {
 }
 
 span{
-	padding-left: 5px;
+	padding-left: 10px;
 	color: lightgray;
 }
 

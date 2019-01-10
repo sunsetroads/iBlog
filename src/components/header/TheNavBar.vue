@@ -39,6 +39,7 @@ export default {
   font-family: Verdana,Geneva,sans-serif;
   font-size: 17px;
   color: #900;
+  z-index: 1000;
 }
 
 a {
