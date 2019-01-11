@@ -15,12 +15,8 @@ export default {
   name: "TheNavBar",
   data () {
     return {
+      links: this.store.state.links
     };
-  },
-  computed: {
-    links () {
-      return this.store.state.links
-    }
   },
   components: {
     BreadcrumbItem

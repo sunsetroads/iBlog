@@ -2,7 +2,7 @@
   <div id='container'>
     <article-list-item
       v-for="item in items"
-      :article="item.message"
+      :article="item"
       :key="item.id"
     />
   </div>

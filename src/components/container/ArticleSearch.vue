@@ -1,27 +1,21 @@
 <template>
-  <div class="category">
+  <div class="search">
     <el-row>
-      <el-col :span="8" :offset="8" class="search">
+      <el-col :span="8" :offset="8" class="vinput">
         <el-input v-model="searchText" placeholder="请输入" autofocus="true"></el-input>
       </el-col>
       <el-col :span="14" :offset="5">
-        <hr>
-        <p>
-          All articles tagged with emacs
-          <span>(sorted by last update, oldest on top)</span>
-          :
-        </p>
-        <ul>
-          <li v-for="(item, index) in articles" :key="index">
-            <a href>2017-1-2: swift中获取对象类型</a>
-          </li>
-        </ul>
+        <article-title-list
+          :articles ="articles"
+        />
       </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
+import ArticleTitleList from './ArticleTitleList'
+
 export default {
   name: "ArticleSearch",
   data() {
@@ -30,44 +24,28 @@ export default {
       articles: ["a", "b", "c", "c", "c", "c", "c"]
     };
   },
-  created() {
-
-  },
-  mounted() {
-
-  },
-  destroyed() {
-    
+  components: {
+    ArticleTitleList
   }
 };
 </script>
+
 <style>
-.search .el-input__inner:focus{
+.vinput .el-input__inner:focus{
   border: none
 }
-.search .el-input__inner{
+.vinput .el-input__inner{
   background-color: #f9f9f9;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
-  border: none
+  border: none;
+  margin-bottom: 35px;
+  margin-top: 15px
 }
 </style>
 
 
 <style scoped>
-hr {
-  margin: 40px 0 20px;
-}
-
-ul li {
-  padding-top: 7px;
-}
-
-a {
-  color: #900;
-  font-size: 15px;
-}
-
-.category {
+.search {
   padding-top: 90px;
 }
 </style>
