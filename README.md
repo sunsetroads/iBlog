@@ -1,5 +1,5 @@
 # iBlog 
-123
+
 ## Project setup
 ```
 yarn install
