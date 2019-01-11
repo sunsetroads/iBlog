@@ -11,7 +11,7 @@
           :key="item.id"
           @click="categorySelect(index)"
         >
-          <a href="">{{item.message}}</a>
+          <a>{{item.message}}</a>
           <span class="count">  (11)</span>
         </li>
     </ul>
@@ -41,13 +41,14 @@ export default {
   },
   methods: {
     categorySelect(index){
-      // let select = this.items[index]
+      let select = this.items[index]
+      this.$router.push(`/category:${select.id}`)
     },
     aboutClick() {
-
+      this.$router.push('/about')
     },
     searchClick() {
-
+      this.$router.push('/search')
     }
   }
 }

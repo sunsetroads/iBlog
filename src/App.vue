@@ -22,10 +22,16 @@ export default {
 <style>
 @import url('./font/font.css');
 
+#app {
+  background-color: #e8e8e1;
+  height: 100%;
+  overflow: scroll
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #e8e8e1;
+  background-color: #f9f9f9;
   font-family: Inconsolata,monospace;
 }
 

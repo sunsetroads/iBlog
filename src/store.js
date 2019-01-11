@@ -5,7 +5,7 @@ export default {
     links: [
       {
         name: "Swift",
-        path: "Category",
+        path: "/category:id",
         id: "1231wqe"
       },
       {
