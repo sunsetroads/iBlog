@@ -1,23 +1,21 @@
 <template>
   <div class="category">
-    <h2>
-      Tag Page for the Category "efficient" 
-    </h2>
-    <div class="article">
-      <hr>
-      <p>
-        All articles tagged with emacs 
-        <span> 
-          (sorted by last update, oldest on top)
-        </span>
-        :
-      </p>
-      <ul>
-        <li v-for="(item, index) in articles" :key="index">
-          <span>2017-1-2 11:53</span><a href=""> swift中获取对象类型</a>
-        </li>
-      </ul>
-    </div>
+    <el-row>
+      <el-col :span="14" :offset="5">
+        <h2>Tag Page for the Category "efficient"</h2>
+        <hr>
+        <p>
+          All articles tagged with emacs
+          <span>(sorted by last update, oldest on top)</span>
+          :
+        </p>
+        <ul>
+          <li v-for="(item, index) in articles" :key="index">
+            <a href>2017-1-2: swift中获取对象类型</a>
+          </li>
+        </ul>
+      </el-col>
+    </el-row>
   </div>
 </template>
 
@@ -26,41 +24,26 @@ export default {
   name: "ArticleCategory",
   data() {
     return {
-      articles: [
-        "a",
-        "b",
-        "c","c","c","c","c"
-      ]
+      articles: ["a", "b", "c", "c", "c", "c", "c"]
     };
   }
 };
 </script>
 
 <style scoped>
-.article {
-  padding: 20px 200px;
+h2 {
+  margin-bottom: 40px;
+   text-align: center;
+  color: #252525;
 }
 
-span {
-  color: #7e7e7e;
-}
-
-li>span {
-  font-size: 13px
-}
-
-ul li{
+ul li {
   padding-top: 7px;
 }
 
 a {
   color: #900;
   font-size: 15px;
-}
-
-h2 {
-  text-align: center;
-  color: #252525;
 }
 
 .category {

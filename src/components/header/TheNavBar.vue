@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 #head {
-  box-shadow: 0 8px 17px 0px rgba(0, 0, 0, .2);
+  box-shadow: 0 2px 9px 0px rgba(0, 0, 0, .1);
   background-color: #f9f9f9;
   padding: .9em;
   margin-bottom: 20px;
