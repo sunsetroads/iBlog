@@ -4,9 +4,9 @@
       <div class="article">
         <article-tags :tags="tags"/>
         <h1>
-          <a href>2018-10-03: Switch Things Faster</a>
+          <a @click="goToDetail">2018-10-03: Switch Things Faster</a>
         </h1>
-        <p>{{article}}</p>
+        <p>{{article.message}}</p>
       </div>
     </el-col>
   </el-row>
@@ -22,6 +22,15 @@ export default {
     return {
       tags: ["emcas", "mmm", "vvvv"]
     };
+  },
+  methods: {
+    goToDetail() {
+      this.$router.push('/articledetail:' + 'id')
+      this.store.dispatch('detail',{
+        name: '2018-10-03',
+        id: '123'
+      })
+    }
   },
   components: {
     ArticleTags

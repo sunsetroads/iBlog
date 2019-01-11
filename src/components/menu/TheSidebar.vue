@@ -42,13 +42,19 @@ export default {
   methods: {
     categorySelect(index){
       let select = this.items[index]
-      this.$router.push(`/category:${select.id}`)
+      this.$router.push(`/category:${select.id}`);
+      this.store.dispatch('category',{
+        name: select.message,
+        id: select.id
+      });
     },
     aboutClick() {
-      this.$router.push('/about')
+      this.$router.push('/about');
+      this.store.dispatch('about');
     },
     searchClick() {
-      this.$router.push('/search')
+      this.$router.push('/search');
+      this.store.dispatch('search');
     }
   }
 }
