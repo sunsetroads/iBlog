@@ -4,9 +4,9 @@
       <div class="article">
         <article-tags :tags="tags"/>
         <h1>
-          <a @click="goToDetail">2018-10-03: Switch Things Faster</a>
+          <a @click="goToDetail">{{article.CreateTime}}: {{article.Title}}</a>
         </h1>
-        <p>{{article.message}}</p>
+        <p>{{article.Summary}}</p>
       </div>
     </el-col>
   </el-row>
@@ -20,15 +20,20 @@ export default {
   props: ["article"],
   data() {
     return {
-      tags: ["emcas", "mmm", "vvvv"]
+      
     };
+  },
+  computed:{
+    tags () {
+      return JSON.parse(this.article.Labels).map( (item) => item.value)
+    }
   },
   methods: {
     goToDetail() {
-      this.$router.push('/articledetail:' + 'id')
+      this.$router.push('/articledetail/' + this.article.Alias)
       this.store.dispatch('detail',{
-        name: '2018-10-03',
-        id: '123'
+        name: this.article.CreateTime,
+        alias: this.article.Alias
       })
     }
   },
@@ -47,6 +52,8 @@ export default {
   margin-bottom: 1.5em;
   border-radius: 0.2em;
   height: 300px;
+  color: #666666;
+  font: 15
 }
 
 h1 {

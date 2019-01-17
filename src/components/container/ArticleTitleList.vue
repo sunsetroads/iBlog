@@ -8,7 +8,7 @@
     </p>
     <ul>
       <li v-for="(item, index) in articles" :key="index">
-        <a @click="goToDetail">2017-1-2: swift中获取对象类型</a>
+        <a @click="goToDetail">{{item.CreateTime}}: {{item.Title}}</a>
       </li>
     </ul>
   </div>
@@ -23,10 +23,10 @@ export default {
 	},
 	methods: {
     goToDetail() {
-      this.$router.push('/articledetail:123')
+      this.$router.push('/articledetail/123')
       this.store.dispatch('detail', {
         name: '2018-10-03',
-        id: '123'
+        alias: '123'
       })
     }
   },

@@ -9,6 +9,7 @@ import About from './components/container/About.vue'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [ 
     {
       path: '/',
@@ -16,13 +17,15 @@ export default new Router({
       component: ArticleList
     },
     {
-      path: '/articledetail:id',
+      path: '/articledetail/:alias',
       name: 'ArticleDetail',
+      props: true,
       component: ArticleDetail
     },
     {
-      path: '/category:id',
+      path: '/category/:alias',
       name: 'Category',
+      props: true,
       component: ArticleCategory
     },
     {

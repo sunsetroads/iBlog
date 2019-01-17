@@ -32,14 +32,14 @@ export default {
         links.splice(0, links.length)
         links.push({
           name: param.name,
-          path: '/category:' + param.id,
+          path: '/category/' + param.alias,
         });
         break;
 
       case 'detail':
         links.push({
           name: param.name,
-          path: '/articledetail:' + param.id,
+          path: '/articledetail/' + param.alias,
         });
         break;
 
@@ -59,3 +59,4 @@ export default {
     }
   }
 }
+
