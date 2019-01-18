@@ -28,10 +28,6 @@ export default {
       this.request(this.alias)
   },
 
-  mounted() {
-
-  },
-
   beforeRouteUpdate (to, from, next) {
       this.request(to.params.alias)
       next()
