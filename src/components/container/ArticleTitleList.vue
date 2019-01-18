@@ -8,7 +8,7 @@
     </p>
     <ul>
       <li v-for="(item, index) in articles" :key="index">
-        <a @click="goToDetail">{{item.CreateTime}}: {{item.Title}}</a>
+        <a @click="goToDetail(index)">{{item.CreateTime}}: {{item.Title}}</a>
       </li>
     </ul>
   </div>
@@ -16,20 +16,21 @@
 
 <script>
 export default {
-	name: "ArticleTitleList",
-	props: ['articles'],
+  name: "ArticleTitleList",
+  props: ["articles"],
   data() {
     return {};
-	},
-	methods: {
-    goToDetail() {
-      this.$router.push('/articledetail/123')
-      this.store.dispatch('detail', {
-        name: '2018-10-03',
-        alias: '123'
-      })
-    }
   },
+  methods: {
+    goToDetail(index) {
+      let select = this.articles[index];
+      this.$router.push("/articledetail/" + select.Alias);
+      this.store.dispatch("detail", {
+        name: select.CreateTime,
+        alias: select.Alias
+      });
+    }
+  }
 };
 </script>
 

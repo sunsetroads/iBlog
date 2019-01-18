@@ -33,6 +33,8 @@ body {
   padding: 0;
   background-color: #f9f9f9;
   font-family: Inconsolata,monospace;
+  color: #404040;
+  font-size: 1em
 }
 
 a {

@@ -29,6 +29,6 @@ export default {
 .tags {
   display: flex;
   justify-content: flex-end;
-  padding: 10px 0 0;
+  padding: 2px 0 0;
 }
 </style>

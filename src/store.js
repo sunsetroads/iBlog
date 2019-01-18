@@ -32,7 +32,13 @@ export default {
         links.splice(0, links.length)
         links.push({
           name: param.name,
-          path: '/category/' + param.alias,
+          path: {
+            name: "Category",
+            params: {
+              cateName: param.name,
+              alias: param.alias
+            }
+          },
         });
         break;
 

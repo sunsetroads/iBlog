@@ -46,7 +46,7 @@ export default {
       })
       this.store.dispatch('category',{
         name: select.cateName,
-        id: select.alias
+        alias: select.alias
       });
     },
     aboutClick() {
