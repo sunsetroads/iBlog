@@ -44,7 +44,6 @@ export default {
 
 <style scoped>
 .article {
-  background-color: #f8f8f8;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.2);
   padding: 1em 2em;
   margin-bottom: 1.5em;
