@@ -11,8 +11,8 @@
           :key="item.id"
           @click="categorySelect(index)"
         >
-          <a>{{item.message}}</a>
-          <span class="count">  (11)</span>
+          <a>{{item.cateName}}</a>
+          <span class="count">  ({{item.count}})</span>
         </li>
     </ul>
     </li>
@@ -26,29 +26,36 @@ export default {
   name: "TheSidebar",
   data () {
     return {
-        about: '',
-        items: [
-        { message: 'emacs', id: 1},
-        { message: 'Swift', id: 2 },
-        { message: 'OC', id: 3 },
-        { message: 'Note', id: 4 },
-        { message: 'emacs', id: 5},
-        { message: 'Swift', id: 6 },
-        { message: 'OC', id: 7 },
-        { message: 'Note', id: 8 }
-      ]
+        items: []
     };
+  },
+  created() {
+      this.$http.get('/api/categories').then((result) => {
+        this.items = result.data
+      });
   },
   methods: {
     categorySelect(index){
       let select = this.items[index]
-      this.$router.push(`/category:${select.id}`)
+      this.$router.push({
+        name: 'Category',
+        params: {
+          alias: select.alias,
+          cateName: select.cateName
+        }
+      })
+      this.store.dispatch('category',{
+        name: select.cateName,
+        alias: select.alias
+      });
     },
     aboutClick() {
-      this.$router.push('/about')
+      this.$router.push('/about');
+      this.store.dispatch('about');
     },
     searchClick() {
-      this.$router.push('/search')
+      this.$router.push('/search');
+      this.store.dispatch('search');
     }
   }
 }

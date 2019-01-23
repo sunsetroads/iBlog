@@ -1,31 +1,50 @@
 <template>
   <div class="category">
     <el-row>
-      <el-col :span="14" :offset="5">
-        <h2>Tag Page for the Category "efficient"</h2>
-        <hr>
-        <p>
-          All articles tagged with emacs
-          <span>(sorted by last update, oldest on top)</span>
-          :
-        </p>
-        <ul>
-          <li v-for="(item, index) in articles" :key="index">
-            <a href>2017-1-2: swift中获取对象类型</a>
-          </li>
-        </ul>
+      <el-col :span="12" :offset="6">
+        <h2>Tag Page for the Category "{{cateName}}"</h2>
+        <article-title-list
+          :articles ="articles"
+        />
       </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
+import ArticleTitleList from './ArticleTitleList'
+
 export default {
   name: "ArticleCategory",
+  props: ['alias','cateName'],
+
   data() {
     return {
-      articles: ["a", "b", "c", "c", "c", "c", "c"]
+      articles: []
     };
+  },
+
+  created() {
+      this.request(this.alias)
+  },
+
+  beforeRouteUpdate (to, from, next) {
+      this.request(to.params.alias)
+      next()
+  },
+
+  methods: {
+    request(alias) {
+      this.$http.post('/api/articles', {
+        categoryAlias: alias
+      }).then((result) => {
+        this.articles = result.data
+      });
+    }
+  },
+
+  components: {
+    ArticleTitleList
   }
 };
 </script>
@@ -33,19 +52,9 @@ export default {
 <style scoped>
 h2 {
   margin-bottom: 40px;
-   text-align: center;
+  text-align: center;
   color: #252525;
 }
-
-ul li {
-  padding-top: 7px;
-}
-
-a {
-  color: #900;
-  font-size: 15px;
-}
-
 .category {
   padding-top: 90px;
 }

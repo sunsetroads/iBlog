@@ -1,7 +1,7 @@
 <template>
   <el-row class="category">
     <el-col :span="5" :offset="5">
-      <span>I like:</span>
+      <span>技能:</span>
       <ul>
         <li v-for="(item, index) in skills" :key="index">{{item}}</li>
       </ul>

@@ -23,7 +23,7 @@ export default {
 @import url('./font/font.css');
 
 #app {
-  background-color: #e8e8e1;
+  background-color: #fff;
   height: 100%;
   overflow: scroll
 }
@@ -33,6 +33,8 @@ body {
   padding: 0;
   background-color: #f9f9f9;
   font-family: Inconsolata,monospace;
+  color: #333333;
+  font-size: 1em
 }
 
 a {
