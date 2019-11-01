@@ -1,6 +1,10 @@
 # iBlog 
 
-## Project setup
+一个简洁的博客前台，主要用来练习使用 Vue 框架。
+
+项目中用到的 Api 由 [iBlog-Admin](https://github.com/sunsetroads/iBlog-Admin) 提供
+
+### Project setup
 ```
 yarn install
 ```
@@ -23,6 +27,3 @@ yarn run test
 ```
 yarn run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
