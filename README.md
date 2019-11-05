@@ -4,6 +4,8 @@
 
 项目中用到的 Api 由 [iBlog-Admin](https://github.com/sunsetroads/iBlog-Admin) 提供
 
+![](https://github.com/sunsetroads/images/blob/master/blog-home.png?raw=true)
+![](https://github.com/sunsetroads/images/blob/master/blog-search.png?raw=true)
 ### Project setup
 ```
 yarn install
@@ -16,14 +18,4 @@ yarn run serve
 ### Compiles and minifies for production
 ```
 yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
 ```
