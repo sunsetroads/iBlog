@@ -4,18 +4,21 @@
 
 项目中用到的 Api 由 [iBlog-Admin](https://github.com/sunsetroads/iBlog-Admin) 提供
 
-![](https://github.com/sunsetroads/images/blob/master/blog-home.png?raw=true)
-![](https://github.com/sunsetroads/images/blob/master/blog-search.png?raw=true)
-### Project setup
+![效果1](https://github.com/sunsetroads/images/blob/master/blog-home.png?raw=true)
+
+![效果2](https://github.com/sunsetroads/images/blob/master/blog-search.png?raw=true)
+
+### 安装
 ```
 yarn install
 ```
-### Compiles and hot-reloads for development
+
+### 运行
 ```
 yarn run serve
 ```
 
-### Compiles and minifies for production
+### 编译
 ```
 yarn run build
 ```
