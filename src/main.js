@@ -5,11 +5,11 @@ import App from './App'
 import router from './router'
 import store from './store'
 import axios from 'axios'
-import Highlight from './plugin/Highlight'
+import Highlight from './Plugin/Highlight'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
-axios.defaults.baseURL = "http://localhost:3000/"
+axios.defaults.baseURL = "http://localhost:80/"
 
 Vue.prototype.$http = axios
 Vue.prototype.store = store;
